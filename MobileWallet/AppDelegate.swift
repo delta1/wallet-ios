@@ -48,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleCommandLineArgs()
         application.statusBarStyle = .lightContent
 
+        ShortcutParser.shared.registerShortcuts()
+        
         return true
     }
 
