@@ -105,7 +105,7 @@ struct TariSettings {
     //Used for showing a little extra detail in the UI to help debugging
     let isDebug = true
     let maxMbLogsStorage: UInt64 = 5000 //5GB
-    let pushNotificationServer = "https://push.tari.com" // "https://1c1c2bea.ngrok.io"
+    let pushNotificationServer = "https://66d6bf1f.ngrok.io" // "https://66d6bf1f.ngrok.io"
     let expirePendingTransactionsAfter: TimeInterval = 60 * 60 * 24 * 1 //1 day
     #else
     let torEnabled = true

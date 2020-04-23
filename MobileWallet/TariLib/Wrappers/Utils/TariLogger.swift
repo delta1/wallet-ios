@@ -20,6 +20,7 @@ public class TariLogger {
         case verbose = "🤫"
         case warning = "⚠️"
         case error = "❌"
+        case attention = "👉"
     }
 
     private static let dateFormatter: DateFormatter = {
@@ -58,6 +59,10 @@ public class TariLogger {
             function: function,
             line: line
         )
+    }
+
+    public static func attention(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+        log(level: .attention, message: "👉👉👉👉\(message)👈👈👈👈👈", file: file, function: function, line: line)
     }
 
     private static func sourceFileName(filePath: String) -> String {

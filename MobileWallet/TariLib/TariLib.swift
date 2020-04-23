@@ -52,6 +52,9 @@ class TariLib {
 
     private var storagePath: String {
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+        print(documentsURL)
+
         return documentsURL.path
     }
 
@@ -270,10 +273,12 @@ class TariLib {
     }
 
     func startExistingWallet(isBackgroundTask: Bool = false) throws {
-        if let privateKeyHex = UserDefaults.standard.string(forKey: PRIVATE_KEY_STORAGE_KEY) {
+        //if let privateKeyHex = UserDefaults.standard.string(forKey: PRIVATE_KEY_STORAGE_KEY) {
             TariLogger.verbose("Database path: \(databasePath)")
 
-            let privateKey = try PrivateKey(hex: privateKeyHex)
+            //print("privateKeyHex: \(privateKeyHex)")
+
+            let privateKey = try PrivateKey(hex: "3a23c63c5cc3a41664a4c58fd455ac8058b457899ba3476b7f7197b4d697c102")
             let transport = try transportType()
             let commsConfig = try CommsConfig(
                 privateKey: privateKey,
@@ -291,9 +296,9 @@ class TariLib {
             }
 
             tariWallet = try Wallet(commsConfig: commsConfig, loggingFilePath: loggingFilePath)
-        } else {
-            throw TariLibErrors.privateKeyNotFound
-        }
+//        } else {
+//            throw TariLibErrors.privateKeyNotFound
+//        }
 
         expirePendingTransactionsAfterSync()
 

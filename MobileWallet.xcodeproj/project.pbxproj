@@ -221,6 +221,45 @@
 		00D988692449B04B000FDC9C /* AnimatedRefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D988682449B04B000FDC9C /* AnimatedRefreshingView.swift */; };
 		00D9886A2449B04B000FDC9C /* AnimatedRefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D988682449B04B000FDC9C /* AnimatedRefreshingView.swift */; };
 		00D9886B2449B04B000FDC9C /* AnimatedRefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D988682449B04B000FDC9C /* AnimatedRefreshingView.swift */; };
+		00D9887724519B43000FDC9C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D9887624519B43000FDC9C /* NotificationService.swift */; };
+		00D9887B24519B43000FDC9C /* MobileWalletNotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00D9887424519B43000FDC9C /* MobileWalletNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		00D988812451A3DD000FDC9C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B4D6F9241B910200ED8318 /* NotificationManager.swift */; };
+		00D9888D2451A446000FDC9C /* TariSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD160A241CCE0600C955B4 /* TariSettings.swift */; };
+		00D9888E2451A446000FDC9C /* TariLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00369D802426080D00BAB95B /* TariLogger.swift */; };
+		00D9888F2451A446000FDC9C /* MicroTari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D211C23CEDF16007D1C10 /* MicroTari.swift */; };
+		00D988902451A446000FDC9C /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00230AF92376C6DD00F23E34 /* Sequence.swift */; };
+		00D988912451A446000FDC9C /* TariEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A057AE23D875840029C22A /* TariEventBus.swift */; };
+		00D988922451A446000FDC9C /* ErrorDescriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004277FA23E1A61F00AE7BD9 /* ErrorDescriptions.swift */; };
+		00D988932451A446000FDC9C /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091D4A623ED879E004BF7F7 /* Signature.swift */; };
+		00D988942451A446000FDC9C /* TestnetKeyServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091D4AA23ED87BE004BF7F7 /* TestnetKeyServer.swift */; };
+		00D988952451A446000FDC9C /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD160E241CD41D00C955B4 /* BaseNode.swift */; };
+		00D988962451A446000FDC9C /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
+		00D988972451A446000FDC9C /* UTXO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619190C6EBD050DC647D1D7B /* UTXO.swift */; };
+		00D988982451A446000FDC9C /* ConnectionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A66526243C766D0046E730 /* ConnectionMonitor.swift */; };
+		00D988992451A44D000FDC9C /* OnionConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BCE47E240D5A9700B181F3 /* OnionConnector.swift */; };
+		00D9889A2451A44D000FDC9C /* OnionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BCE47D240D5A9700B181F3 /* OnionManager.swift */; };
+		00D9889B2451A453000FDC9C /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD20A352407967B007B64D8 /* TransportType.swift */; };
+		00D9889C2451A453000FDC9C /* ByteVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD80D237DA07400EBF5E6 /* ByteVector.swift */; };
+		00D9889D2451A453000FDC9C /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD811237E9EE200EBF5E6 /* PrivateKey.swift */; };
+		00D9889E2451A453000FDC9C /* CommsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD819237EB31900EBF5E6 /* CommsConfig.swift */; };
+		00D9889F2451A453000FDC9C /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BBD815237EA67600EBF5E6 /* Wallet.swift */; };
+		00D988A02451A453000FDC9C /* WalletTestDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004997BA2382F5ED000A0B7D /* WalletTestDataExtension.swift */; };
+		00D988A12451A453000FDC9C /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F6CDB238011CA00FA7002 /* PublicKey.swift */; };
+		00D988A22451A453000FDC9C /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F6CDF2380198D00FA7002 /* Contacts.swift */; };
+		00D988A32451A453000FDC9C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F6CE32380253B00FA7002 /* Contact.swift */; };
+		00D988A42451A457000FDC9C /* CompletedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F6CEB2381A39300FA7002 /* CompletedTransaction.swift */; };
+		00D988A52451A457000FDC9C /* CompletedTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001F6CE72381A22E00FA7002 /* CompletedTransactions.swift */; };
+		00D988A62451A457000FDC9C /* PendingOutboundTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004997AE2382E938000A0B7D /* PendingOutboundTransaction.swift */; };
+		00D988A72451A457000FDC9C /* PendingOutboundTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004997AA2382E893000A0B7D /* PendingOutboundTransactions.swift */; };
+		00D988A82451A457000FDC9C /* PendingInboundTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004997B22382ED68000A0B7D /* PendingInboundTransaction.swift */; };
+		00D988A92451A457000FDC9C /* PendingInboundTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004997B62382ED79000A0B7D /* PendingInboundTransactions.swift */; };
+		00D988AA2451A45B000FDC9C /* TransactionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00947CC123CF090D00526DD5 /* TransactionProtocol.swift */; };
+		00D988AB2451A45B000FDC9C /* TransactionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00947CC623D1A35200526DD5 /* TransactionsProtocol.swift */; };
+		00D988AC2451A5EC000FDC9C /* Tor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BCE486240D5C4100B181F3 /* Tor.framework */; };
+		00D988AD2451A603000FDC9C /* TariLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009BF8AB237ABB4700C02E44 /* TariLib.swift */; };
+		00D988B52451A68A000FDC9C /* libtari_wallet_ffi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCF87EC23E8273900C8CDB1 /* libtari_wallet_ffi.a */; };
+		00D988B72451A6E5000FDC9C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D988B62451A6E5000FDC9C /* libsqlite3.tbd */; };
+		00D988B92451A6F1000FDC9C /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D988B82451A6F1000FDC9C /* libc++.1.tbd */; };
 		00DC2E22238554FD00036DDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DC2E21238554FD00036DDC /* libsqlite3.tbd */; };
 		00DC2E242385559C00036DDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DC2E232385559C00036DDC /* libsqlite3.tbd */; };
 		00DC2E25238555A200036DDC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DC2E232385559C00036DDC /* libsqlite3.tbd */; };
@@ -253,9 +292,6 @@
 		00E491AB2366E08F007B332D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E491A92366E08F007B332D /* LaunchScreen.storyboard */; };
 		00E491B62366E08F007B332D /* MobileWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E491B52366E08F007B332D /* MobileWalletTests.swift */; };
 		00E491C12366E08F007B332D /* MobileWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E491C02366E08F007B332D /* MobileWalletUITests.swift */; };
-		00E4922923683E54007B332D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4922823683E54007B332D /* HomeViewController.swift */; };
-		00E4922A23683E54007B332D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4922823683E54007B332D /* HomeViewController.swift */; };
-		00E4922B23683E54007B332D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4922823683E54007B332D /* HomeViewController.swift */; };
 		00F53A642428E44700448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
 		00F53A6A24290F7100448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
 		00F53A6B24290FAE00448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
@@ -281,6 +317,7 @@
 		619197D2BB78CBBC06B0F87E /* UTXO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619190C6EBD050DC647D1D7B /* UTXO.swift */; };
 		619198F3E20DFABEB23F63FE /* UTXO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619190C6EBD050DC647D1D7B /* UTXO.swift */; };
 		83EF1C05BE3D003F97626E60 /* Pods_MobileWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9926F406D47AD1335698D7E1 /* Pods_MobileWalletTests.framework */; };
+		926859EBB26D8408A61C0BA5 /* Pods_MobileWalletNotificationService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95ACF310799F944DC1E590C /* Pods_MobileWalletNotificationService.framework */; };
 		BF0A7766241EEA0A00861A3E /* FaceID.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0A7765241EEA0A00861A3E /* FaceID.json */; };
 		BF0A7767241EEA0A00861A3E /* FaceID.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0A7765241EEA0A00861A3E /* FaceID.json */; };
 		BF0A7768241EEA0A00861A3E /* FaceID.json in Resources */ = {isa = PBXBuildFile; fileRef = BF0A7765241EEA0A00861A3E /* FaceID.json */; };
@@ -381,6 +418,13 @@
 			remoteGlobalIDString = 00E491952366E08B007B332D;
 			remoteInfo = MobileWallet;
 		};
+		00D9887924519B43000FDC9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E4918E2366E08B007B332D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00D9887324519B43000FDC9C;
+			remoteInfo = MobileWalletNotificationService;
+		};
 		00E491B22366E08F007B332D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00E4918E2366E08B007B332D /* Project object */;
@@ -396,6 +440,20 @@
 			remoteInfo = MobileWallet;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00D9887C24519B43000FDC9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				00D9887B24519B43000FDC9C /* MobileWalletNotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0012562E2371D81500A9C067 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +540,13 @@
 		00C185C52390221A0096984E /* DevelopmentUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentUI.swift; sourceTree = "<group>"; };
 		00D7BD8824349AE3009DD097 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		00D988682449B04B000FDC9C /* AnimatedRefreshingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRefreshingView.swift; sourceTree = "<group>"; };
+		00D9887424519B43000FDC9C /* MobileWalletNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MobileWalletNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		00D9887624519B43000FDC9C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		00D9887824519B43000FDC9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00D988B62451A6E5000FDC9C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		00D988B82451A6F1000FDC9C /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libc++.1.tbd"; sourceTree = DEVELOPER_DIR; };
+		00D988C02451AAAC000FDC9C /* MobileWalletNotificationService-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileWalletNotificationService-Bridging-Header.h"; sourceTree = "<group>"; };
+		00D988C32451AE16000FDC9C /* MobileWalletNotificationServiceRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MobileWalletNotificationServiceRelease.entitlements; sourceTree = "<group>"; };
 		00DC2E21238554FD00036DDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		00DC2E232385559C00036DDC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		00DD160A241CCE0600C955B4 /* TariSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariSettings.swift; sourceTree = "<group>"; };
@@ -505,8 +570,8 @@
 		00E491BC2366E08F007B332D /* MobileWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E491C02366E08F007B332D /* MobileWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWalletUITests.swift; sourceTree = "<group>"; };
 		00E491C22366E08F007B332D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E4922823683E54007B332D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		00F53A632428E44700448466 /* StorageCleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCleanup.swift; sourceTree = "<group>"; };
+		0A4E068B011CE624C44089E9 /* Pods-MobileWalletNotificationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWalletNotificationService.release.xcconfig"; path = "Target Support Files/Pods-MobileWalletNotificationService/Pods-MobileWalletNotificationService.release.xcconfig"; sourceTree = "<group>"; };
 		0D5A214BA7374BF19AA25539 /* Pods-MobileWallet-MobileWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet-MobileWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWallet-MobileWalletTests/Pods-MobileWallet-MobileWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
 		149D41C0C9E88C8782E52C11 /* Pods-MobileWallet-MobileWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet-MobileWalletTests.release.xcconfig"; path = "Target Support Files/Pods-MobileWallet-MobileWalletTests/Pods-MobileWallet-MobileWalletTests.release.xcconfig"; sourceTree = "<group>"; };
 		153952A60E3931ABC327A007 /* Pods_MobileWallet_MobileWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWallet_MobileWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -525,6 +590,7 @@
 		540C8A02EEFE26A1133C9AA7 /* Pods-MobileWallet-MobileWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet-MobileWalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWallet-MobileWalletUITests/Pods-MobileWallet-MobileWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		619190C6EBD050DC647D1D7B /* UTXO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTXO.swift; sourceTree = "<group>"; };
 		867662CACBB1C47B665EBA55 /* Pods-MobileWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWalletTests.release.xcconfig"; path = "Target Support Files/Pods-MobileWalletTests/Pods-MobileWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		9485385C0DF234FC4CE9F234 /* Pods-MobileWalletNotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWalletNotificationService.debug.xcconfig"; path = "Target Support Files/Pods-MobileWalletNotificationService/Pods-MobileWalletNotificationService.debug.xcconfig"; sourceTree = "<group>"; };
 		9926F406D47AD1335698D7E1 /* Pods_MobileWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0A7765241EEA0A00861A3E /* FaceID.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FaceID.json; sourceTree = "<group>"; };
 		BF0A7799241F904D00861A3E /* faceId@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faceId@3x.png"; sourceTree = "<group>"; };
@@ -554,6 +620,7 @@
 		BFF1EDA22408225900CC9EF6 /* sendingTariAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sendingTariAnimation.json; sourceTree = "<group>"; };
 		BFF1EDA62408226200CC9EF6 /* sending-background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sending-background.mp4"; sourceTree = "<group>"; };
 		CB7DC916E97096D5FCB440E3 /* Pods-MobileWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWalletTests/Pods-MobileWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D95ACF310799F944DC1E590C /* Pods_MobileWalletNotificationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWalletNotificationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C8060CF3B17C7AA315F558 /* Pods-MobileWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet.release.xcconfig"; path = "Target Support Files/Pods-MobileWallet/Pods-MobileWallet.release.xcconfig"; sourceTree = "<group>"; };
 		F28D9135828811CA84244432 /* Pods_MobileWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4E5AB1EC7D42438C3CA62CF /* Pods-MobileWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet.debug.xcconfig"; path = "Target Support Files/Pods-MobileWallet/Pods-MobileWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -565,6 +632,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00D9887124519B43000FDC9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00D988B52451A68A000FDC9C /* libtari_wallet_ffi.a in Frameworks */,
+				00D988B72451A6E5000FDC9C /* libsqlite3.tbd in Frameworks */,
+				00D988B92451A6F1000FDC9C /* libc++.1.tbd in Frameworks */,
+				926859EBB26D8408A61C0BA5 /* Pods_MobileWalletNotificationService.framework in Frameworks */,
+				00D988AC2451A5EC000FDC9C /* Tor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +909,17 @@
 			path = Debug;
 			sourceTree = "<group>";
 		};
+		00D9887524519B43000FDC9C /* MobileWalletNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				00D988C32451AE16000FDC9C /* MobileWalletNotificationServiceRelease.entitlements */,
+				00D988C02451AAAC000FDC9C /* MobileWalletNotificationService-Bridging-Header.h */,
+				00D9887624519B43000FDC9C /* NotificationService.swift */,
+				00D9887824519B43000FDC9C /* Info.plist */,
+			);
+			path = MobileWalletNotificationService;
+			sourceTree = "<group>";
+		};
 		00E2BCA6236AB25500C2A105 /* TransactionHistory */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,6 +994,7 @@
 				00E491B42366E08F007B332D /* MobileWalletTests */,
 				00E491BF2366E08F007B332D /* MobileWalletUITests */,
 				00B4D6AC2416A32200ED8318 /* MobileWalletUISnapshots */,
+				00D9887524519B43000FDC9C /* MobileWalletNotificationService */,
 				00E491972366E08B007B332D /* Products */,
 				71F4BDBF8B1AF18134115485 /* Pods */,
 				27F235021D9E2060A3CBB465 /* Frameworks */,
@@ -917,6 +1008,7 @@
 				00E491B12366E08F007B332D /* MobileWalletTests.xctest */,
 				00E491BC2366E08F007B332D /* MobileWalletUITests.xctest */,
 				00B4D6AB2416A32200ED8318 /* MobileWalletUISnapshots.xctest */,
+				00D9887424519B43000FDC9C /* MobileWalletNotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -970,6 +1062,8 @@
 		27F235021D9E2060A3CBB465 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00D988B82451A6F1000FDC9C /* libc++.1.tbd */,
+				00D988B62451A6E5000FDC9C /* libsqlite3.tbd */,
 				00BCE486240D5C4100B181F3 /* Tor.framework */,
 				4CCF87EC23E8273900C8CDB1 /* libtari_wallet_ffi.a */,
 				00DC2E21238554FD00036DDC /* libsqlite3.tbd */,
@@ -980,6 +1074,7 @@
 				F28D9135828811CA84244432 /* Pods_MobileWallet.framework */,
 				153952A60E3931ABC327A007 /* Pods_MobileWallet_MobileWalletUITests.framework */,
 				9926F406D47AD1335698D7E1 /* Pods_MobileWalletTests.framework */,
+				D95ACF310799F944DC1E590C /* Pods_MobileWalletNotificationService.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1019,6 +1114,8 @@
 				149D41C0C9E88C8782E52C11 /* Pods-MobileWallet-MobileWalletTests.release.xcconfig */,
 				2FF33C780E811D173D3284C3 /* Pods-MobileWalletUITests.debug.xcconfig */,
 				28164FB1973A4277E7C47F6D /* Pods-MobileWalletUITests.release.xcconfig */,
+				9485385C0DF234FC4CE9F234 /* Pods-MobileWalletNotificationService.debug.xcconfig */,
+				0A4E068B011CE624C44089E9 /* Pods-MobileWalletNotificationService.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1161,6 +1258,24 @@
 			productReference = 00B4D6AB2416A32200ED8318 /* MobileWalletUISnapshots.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		00D9887324519B43000FDC9C /* MobileWalletNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00D9887F24519B43000FDC9C /* Build configuration list for PBXNativeTarget "MobileWalletNotificationService" */;
+			buildPhases = (
+				D4F200DC926653CD3C3AF87F /* [CP] Check Pods Manifest.lock */,
+				00D9887024519B43000FDC9C /* Sources */,
+				00D9887124519B43000FDC9C /* Frameworks */,
+				00D9887224519B43000FDC9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileWalletNotificationService;
+			productName = MobileWalletNotificationService;
+			productReference = 00D9887424519B43000FDC9C /* MobileWalletNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		00E491952366E08B007B332D /* MobileWallet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E491C52366E08F007B332D /* Build configuration list for PBXNativeTarget "MobileWallet" */;
@@ -1171,10 +1286,12 @@
 				00E491942366E08B007B332D /* Resources */,
 				00E491E823670555007B332D /* ShellScript */,
 				1D2ED85D52528FD37F207E5E /* [CP] Embed Pods Frameworks */,
+				00D9887C24519B43000FDC9C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				00D9887A24519B43000FDC9C /* PBXTargetDependency */,
 			);
 			name = MobileWallet;
 			productName = MobileWallet;
@@ -1237,6 +1354,10 @@
 						LastSwiftMigration = 1130;
 						TestTargetID = 00E491952366E08B007B332D;
 					};
+					00D9887324519B43000FDC9C = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
 					00E491952366E08B007B332D = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -1269,6 +1390,7 @@
 				00E491B02366E08F007B332D /* MobileWalletTests */,
 				00E491BB2366E08F007B332D /* MobileWalletUITests */,
 				00B4D6AA2416A32200ED8318 /* MobileWalletUISnapshots */,
+				00D9887324519B43000FDC9C /* MobileWalletNotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -1286,6 +1408,13 @@
 				BF0A77C72420DA3200861A3E /* TouchIdAnimation.json in Resources */,
 				BF0A77A3241F904D00861A3E /* faceId.png in Resources */,
 				BF0A779F241F904D00861A3E /* faceId@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00D9887224519B43000FDC9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1529,6 +1658,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D4F200DC926653CD3C3AF87F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MobileWalletNotificationService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D547E6E3A0F51CA88BB64A82 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1558,6 +1709,47 @@
 				BFCA0E6C242CA8780024FC0C /* TariLogger.swift in Sources */,
 				00B4D6BC24178CBD00ED8318 /* Biometrics.m in Sources */,
 				00B4D6BB2417894800ED8318 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00D9887024519B43000FDC9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00D9888F2451A446000FDC9C /* MicroTari.swift in Sources */,
+				00D988812451A3DD000FDC9C /* NotificationManager.swift in Sources */,
+				00D988A32451A453000FDC9C /* Contact.swift in Sources */,
+				00D988A12451A453000FDC9C /* PublicKey.swift in Sources */,
+				00D988A62451A457000FDC9C /* PendingOutboundTransaction.swift in Sources */,
+				00D988AB2451A45B000FDC9C /* TransactionsProtocol.swift in Sources */,
+				00D9889B2451A453000FDC9C /* TransportType.swift in Sources */,
+				00D988902451A446000FDC9C /* Sequence.swift in Sources */,
+				00D988932451A446000FDC9C /* Signature.swift in Sources */,
+				00D9889E2451A453000FDC9C /* CommsConfig.swift in Sources */,
+				00D988A02451A453000FDC9C /* WalletTestDataExtension.swift in Sources */,
+				00D988A22451A453000FDC9C /* Contacts.swift in Sources */,
+				00D988922451A446000FDC9C /* ErrorDescriptions.swift in Sources */,
+				00D988AA2451A45B000FDC9C /* TransactionProtocol.swift in Sources */,
+				00D988912451A446000FDC9C /* TariEventBus.swift in Sources */,
+				00D988A72451A457000FDC9C /* PendingOutboundTransactions.swift in Sources */,
+				00D988A92451A457000FDC9C /* PendingInboundTransactions.swift in Sources */,
+				00D988982451A446000FDC9C /* ConnectionMonitor.swift in Sources */,
+				00D988952451A446000FDC9C /* BaseNode.swift in Sources */,
+				00D988A82451A457000FDC9C /* PendingInboundTransaction.swift in Sources */,
+				00D9889D2451A453000FDC9C /* PrivateKey.swift in Sources */,
+				00D9887724519B43000FDC9C /* NotificationService.swift in Sources */,
+				00D988972451A446000FDC9C /* UTXO.swift in Sources */,
+				00D988962451A446000FDC9C /* StorageCleanup.swift in Sources */,
+				00D9889A2451A44D000FDC9C /* OnionManager.swift in Sources */,
+				00D9889F2451A453000FDC9C /* Wallet.swift in Sources */,
+				00D9888D2451A446000FDC9C /* TariSettings.swift in Sources */,
+				00D988942451A446000FDC9C /* TestnetKeyServer.swift in Sources */,
+				00D988A42451A457000FDC9C /* CompletedTransaction.swift in Sources */,
+				00D988AD2451A603000FDC9C /* TariLib.swift in Sources */,
+				00D9888E2451A446000FDC9C /* TariLogger.swift in Sources */,
+				00D9889C2451A453000FDC9C /* ByteVector.swift in Sources */,
+				00D988A52451A457000FDC9C /* CompletedTransactions.swift in Sources */,
+				00D988992451A44D000FDC9C /* OnionConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1847,6 +2039,11 @@
 			target = 00E491952366E08B007B332D /* MobileWallet */;
 			targetProxy = 00B4D6B02416A32200ED8318 /* PBXContainerItemProxy */;
 		};
+		00D9887A24519B43000FDC9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00D9887324519B43000FDC9C /* MobileWalletNotificationService */;
+			targetProxy = 00D9887924519B43000FDC9C /* PBXContainerItemProxy */;
+		};
 		00E491B32366E08F007B332D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00E491952366E08B007B332D /* MobileWallet */;
@@ -1921,6 +2118,84 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MobileWallet;
+			};
+			name = Release;
+		};
+		00D9887D24519B43000FDC9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9485385C0DF234FC4CE9F234 /* Pods-MobileWalletNotificationService.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					TARGET_IS_UI_APP,
+				);
+				INFOPLIST_FILE = MobileWalletNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MobileWallet/TariLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.wallet.MobileWalletNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileWalletNotificationService/MobileWalletNotificationService-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00D9887E24519B43000FDC9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A4E068B011CE624C44089E9 /* Pods-MobileWalletNotificationService.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MobileWalletNotificationService/MobileWalletNotificationServiceRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					TARGET_IS_UI_APP,
+				);
+				INFOPLIST_FILE = MobileWalletNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MobileWallet/TariLib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.wallet.MobileWalletNotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MobileWalletNotificationService/MobileWalletNotificationService-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2046,6 +2321,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4E5AB1EC7D42438C3CA62CF /* Pods-MobileWallet.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = MobileWallet/Tari.entitlements;
@@ -2081,6 +2357,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6C8060CF3B17C7AA315F558 /* Pods-MobileWallet.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = MobileWallet/Tari.entitlements;
@@ -2250,6 +2527,15 @@
 			buildConfigurations = (
 				00B4D6B22416A32200ED8318 /* Debug */,
 				00B4D6B32416A32200ED8318 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00D9887F24519B43000FDC9C /* Build configuration list for PBXNativeTarget "MobileWalletNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00D9887D24519B43000FDC9C /* Debug */,
+				00D9887E24519B43000FDC9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -112,7 +112,9 @@ class NotificationManager {
 
                 DispatchQueue.main.async {
                     TariLogger.info("Registering for remote notifications with Apple")
+                    #if TARGET_IS_UI_APP
                     UIApplication.shared.registerForRemoteNotifications()
+                    #endif
                 }
             } else {
                 TariLogger.warn("Notifications not authorized")
@@ -152,6 +154,9 @@ class NotificationManager {
         let apnsDeviceToken = deviceToken.map {String(format: "%02.2hhx", $0)}.joined()
 
         TariLogger.verbose("Registering device token with public key")
+        if TariSettings.shared.isDebug {
+            TariLogger.verbose("Token: \(apnsDeviceToken)")
+        }
 
         guard let wallet = TariLib.shared.tariWallet else {
             return TariLogger.error("Failed to get wallet", error: WalletErrors.walletNotInitialized)
@@ -346,5 +351,9 @@ class NotificationManager {
         }
 
         task.resume()
+    }
+
+    func scheduleReminderNotifications() {
+
     }
 }
