@@ -41,6 +41,7 @@
 import UIKit
 import CoreData
 import Sentry
+import TariKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {

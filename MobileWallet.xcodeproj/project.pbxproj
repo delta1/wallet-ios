@@ -304,6 +304,11 @@
 		00E491AB2366E08F007B332D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E491A92366E08F007B332D /* LaunchScreen.storyboard */; };
 		00E491B62366E08F007B332D /* MobileWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E491B52366E08F007B332D /* MobileWalletTests.swift */; };
 		00E491C12366E08F007B332D /* MobileWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E491C02366E08F007B332D /* MobileWalletUITests.swift */; };
+		00E76820248FC4C70081037D /* TariKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E76817248FC4C70081037D /* TariKit.framework */; };
+		00E76827248FC4C70081037D /* TariKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E76826248FC4C70081037D /* TariKitTests.swift */; };
+		00E76829248FC4C70081037D /* TariKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E76819248FC4C70081037D /* TariKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00E7682C248FC4C70081037D /* TariKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E76817248FC4C70081037D /* TariKit.framework */; };
+		00E7682E248FC4C70081037D /* TariKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 00E76817248FC4C70081037D /* TariKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		00F53A642428E44700448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
 		00F53A6A24290F7100448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
 		00F53A6B24290FAE00448466 /* StorageCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F53A632428E44700448466 /* StorageCleanup.swift */; };
@@ -500,6 +505,27 @@
 			remoteGlobalIDString = 00E491952366E08B007B332D;
 			remoteInfo = MobileWallet;
 		};
+		00E76821248FC4C70081037D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E4918E2366E08B007B332D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00E76816248FC4C70081037D;
+			remoteInfo = TariKit;
+		};
+		00E76823248FC4C70081037D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E4918E2366E08B007B332D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00E491952366E08B007B332D;
+			remoteInfo = MobileWallet;
+		};
+		00E7682A248FC4C70081037D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00E4918E2366E08B007B332D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00E76816248FC4C70081037D;
+			remoteInfo = TariKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -512,6 +538,17 @@
 				00C520A6246965260077BF7F /* MobileWalletNotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E7682D248FC4C70081037D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				00E7682E248FC4C70081037D /* TariKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -633,6 +670,12 @@
 		00E491BC2366E08F007B332D /* MobileWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E491C02366E08F007B332D /* MobileWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileWalletUITests.swift; sourceTree = "<group>"; };
 		00E491C22366E08F007B332D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E76817248FC4C70081037D /* TariKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TariKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E76819248FC4C70081037D /* TariKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TariKit.h; sourceTree = "<group>"; };
+		00E7681A248FC4C70081037D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E7681F248FC4C70081037D /* TariKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TariKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E76826248FC4C70081037D /* TariKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariKitTests.swift; sourceTree = "<group>"; };
+		00E76828248FC4C70081037D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F53A632428E44700448466 /* StorageCleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCleanup.swift; sourceTree = "<group>"; };
 		0D5A214BA7374BF19AA25539 /* Pods-MobileWallet-MobileWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet-MobileWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-MobileWallet-MobileWalletTests/Pods-MobileWallet-MobileWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
 		149D41C0C9E88C8782E52C11 /* Pods-MobileWallet-MobileWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileWallet-MobileWalletTests.release.xcconfig"; path = "Target Support Files/Pods-MobileWallet-MobileWalletTests/Pods-MobileWallet-MobileWalletTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -735,6 +778,7 @@
 				0070A7BC2379847100C25E1C /* LocalAuthentication.framework in Frameworks */,
 				4C2C95C7237962CB005058AB /* libc++.tbd in Frameworks */,
 				123181E402EDECC46E321212 /* Pods_MobileWallet.framework in Frameworks */,
+				00E7682C248FC4C70081037D /* TariKit.framework in Frameworks */,
 				00BCE487240D5C4100B181F3 /* Tor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,6 +802,21 @@
 				00DC2E25238555A200036DDC /* libsqlite3.tbd in Frameworks */,
 				00BCE48D240F9FA100B181F3 /* Tor.framework in Frameworks */,
 				1C2D151A197172FD352B6717 /* Pods_MobileWallet_MobileWalletUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E76814248FC4C70081037D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E7681C248FC4C70081037D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E76820248FC4C70081037D /* TariKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,6 +1152,8 @@
 				00E491BF2366E08F007B332D /* MobileWalletUITests */,
 				00B4D6AC2416A32200ED8318 /* MobileWalletUISnapshots */,
 				00C520A0246965260077BF7F /* MobileWalletNotificationService */,
+				00E76818248FC4C70081037D /* TariKit */,
+				00E76825248FC4C70081037D /* TariKitTests */,
 				00E491972366E08B007B332D /* Products */,
 				71F4BDBF8B1AF18134115485 /* Pods */,
 				27F235021D9E2060A3CBB465 /* Frameworks */,
@@ -1107,6 +1168,8 @@
 				00E491BC2366E08F007B332D /* MobileWalletUITests.xctest */,
 				00B4D6AB2416A32200ED8318 /* MobileWalletUISnapshots.xctest */,
 				00C5209F246965260077BF7F /* MobileWalletNotificationService.appex */,
+				00E76817248FC4C70081037D /* TariKit.framework */,
+				00E7681F248FC4C70081037D /* TariKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1155,6 +1218,24 @@
 				00C185C52390221A0096984E /* DevelopmentUI.swift */,
 			);
 			path = MobileWalletUITests;
+			sourceTree = "<group>";
+		};
+		00E76818248FC4C70081037D /* TariKit */ = {
+			isa = PBXGroup;
+			children = (
+				00E76819248FC4C70081037D /* TariKit.h */,
+				00E7681A248FC4C70081037D /* Info.plist */,
+			);
+			path = TariKit;
+			sourceTree = "<group>";
+		};
+		00E76825248FC4C70081037D /* TariKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E76826248FC4C70081037D /* TariKitTests.swift */,
+				00E76828248FC4C70081037D /* Info.plist */,
+			);
+			path = TariKitTests;
 			sourceTree = "<group>";
 		};
 		27F235021D9E2060A3CBB465 /* Frameworks */ = {
@@ -1376,6 +1457,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		00E76812248FC4C70081037D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E76829248FC4C70081037D /* TariKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		00B4D6AA2416A32200ED8318 /* MobileWalletUISnapshots */ = {
 			isa = PBXNativeTarget;
@@ -1424,11 +1516,13 @@
 				00E491E823670555007B332D /* ShellScript */,
 				1D2ED85D52528FD37F207E5E /* [CP] Embed Pods Frameworks */,
 				00C520A7246965260077BF7F /* Embed App Extensions */,
+				00E7682D248FC4C70081037D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				00C520A5246965260077BF7F /* PBXTargetDependency */,
+				00E7682B248FC4C70081037D /* PBXTargetDependency */,
 			);
 			name = MobileWallet;
 			productName = MobileWallet;
@@ -1476,13 +1570,50 @@
 			productReference = 00E491BC2366E08F007B332D /* MobileWalletUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		00E76816248FC4C70081037D /* TariKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E76833248FC4C70081037D /* Build configuration list for PBXNativeTarget "TariKit" */;
+			buildPhases = (
+				00E76812248FC4C70081037D /* Headers */,
+				00E76813248FC4C70081037D /* Sources */,
+				00E76814248FC4C70081037D /* Frameworks */,
+				00E76815248FC4C70081037D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TariKit;
+			productName = TariKit;
+			productReference = 00E76817248FC4C70081037D /* TariKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		00E7681E248FC4C70081037D /* TariKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E76834248FC4C70081037D /* Build configuration list for PBXNativeTarget "TariKitTests" */;
+			buildPhases = (
+				00E7681B248FC4C70081037D /* Sources */,
+				00E7681C248FC4C70081037D /* Frameworks */,
+				00E7681D248FC4C70081037D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E76822248FC4C70081037D /* PBXTargetDependency */,
+				00E76824248FC4C70081037D /* PBXTargetDependency */,
+			);
+			name = TariKitTests;
+			productName = TariKitTests;
+			productReference = 00E7681F248FC4C70081037D /* TariKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		00E4918E2366E08B007B332D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Jason van den Berg";
 				TargetAttributes = {
@@ -1508,6 +1639,13 @@
 						LastSwiftMigration = 1120;
 						TestTargetID = 00E491952366E08B007B332D;
 					};
+					00E76816248FC4C70081037D = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					00E7681E248FC4C70081037D = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 00E491952366E08B007B332D;
+					};
 				};
 			};
 			buildConfigurationList = 00E491912366E08B007B332D /* Build configuration list for PBXProject "MobileWallet" */;
@@ -1528,6 +1666,8 @@
 				00E491BB2366E08F007B332D /* MobileWalletUITests */,
 				00B4D6AA2416A32200ED8318 /* MobileWalletUISnapshots */,
 				00C5209E246965260077BF7F /* MobileWalletNotificationService */,
+				00E76816248FC4C70081037D /* TariKit */,
+				00E7681E248FC4C70081037D /* TariKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1654,6 +1794,20 @@
 				BF191A2223E5AFA200D33C85 /* img_1.png in Resources */,
 				BF191A1C23E5AFA200D33C85 /* img_2.png in Resources */,
 				BF191A1923E5AFA200D33C85 /* img_4.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E76815248FC4C70081037D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E7681D248FC4C70081037D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2227,6 +2381,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00E76813248FC4C70081037D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00E7681B248FC4C70081037D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E76827248FC4C70081037D /* TariKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2249,6 +2418,21 @@
 			isa = PBXTargetDependency;
 			target = 00E491952366E08B007B332D /* MobileWallet */;
 			targetProxy = 00E491BD2366E08F007B332D /* PBXContainerItemProxy */;
+		};
+		00E76822248FC4C70081037D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00E76816248FC4C70081037D /* TariKit */;
+			targetProxy = 00E76821248FC4C70081037D /* PBXContainerItemProxy */;
+		};
+		00E76824248FC4C70081037D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00E491952366E08B007B332D /* MobileWallet */;
+			targetProxy = 00E76823248FC4C70081037D /* PBXContainerItemProxy */;
+		};
+		00E7682B248FC4C70081037D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00E76816248FC4C70081037D /* TariKit */;
+			targetProxy = 00E7682A248FC4C70081037D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2702,6 +2886,106 @@
 			};
 			name = Release;
 		};
+		00E7682F248FC4C70081037D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TariKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.TariKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		00E76830248FC4C70081037D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TariKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.TariKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		00E76831248FC4C70081037D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				INFOPLIST_FILE = TariKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.TariKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tari Aurora.app/Tari Aurora";
+			};
+			name = Debug;
+		};
+		00E76832248FC4C70081037D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8XGMD9X2H2;
+				INFOPLIST_FILE = TariKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tari.TariKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tari Aurora.app/Tari Aurora";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2755,6 +3039,24 @@
 			buildConfigurations = (
 				00E491CC2366E08F007B332D /* Debug */,
 				00E491CD2366E08F007B332D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E76833248FC4C70081037D /* Build configuration list for PBXNativeTarget "TariKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E7682F248FC4C70081037D /* Debug */,
+				00E76830248FC4C70081037D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00E76834248FC4C70081037D /* Build configuration list for PBXNativeTarget "TariKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E76831248FC4C70081037D /* Debug */,
+				00E76832248FC4C70081037D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
