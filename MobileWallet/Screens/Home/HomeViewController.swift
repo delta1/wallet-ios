@@ -51,6 +51,7 @@ class HomeViewController: UIViewController {
 
     private static let GRABBER_WIDTH: Double = 55.0
     private static let PANEL_BORDER_CORNER_RADIUS: CGFloat = 15.0
+    static let INTRO_TO_WALLET_USER_DEFAULTS_KEY = "walletHasBeenIntroduced"
 
     private let navigationBar = UIView()
     private var navigationBarBottomConstraint: NSLayoutConstraint?
@@ -94,7 +95,11 @@ class HomeViewController: UIViewController {
     }()
 
     var isFirstIntroToWallet: Bool {
-        return !UserDefaults.Key.walletHasBeenIntroduced.boolValue()
+        if UserDefaults.standard.string(forKey: HomeViewController.INTRO_TO_WALLET_USER_DEFAULTS_KEY) == nil {
+            return true
+        }
+
+        return false
     }
 
     private var isTransactionViewFullScreen: Bool = false {
@@ -328,7 +333,7 @@ class HomeViewController: UIViewController {
 
             //User swipes down for the first time
             if isFirstIntroToWallet {
-                UserDefaults.Key.walletHasBeenIntroduced.set(true)
+                UserDefaults.standard.set(true, forKey: HomeViewController.INTRO_TO_WALLET_USER_DEFAULTS_KEY)
             }
 
             navigationController?.setNavigationBarHidden(true, animated: true)

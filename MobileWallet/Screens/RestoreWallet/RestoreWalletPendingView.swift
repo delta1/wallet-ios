@@ -41,16 +41,12 @@
 import UIKit
 import Lottie
 
-class PendingView: UIView {
+class RestoreWalletPendingView: UIView {
 
     private let containerStackView = UIStackView()
-    private let title: String?
-    private let definition: String?
 
-    init(title: String?, definition: String?) {
-        self.title = title
-        self.definition = definition
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupSubviews()
     }
 
@@ -59,7 +55,7 @@ class PendingView: UIView {
     }
 
     func showPendingView(completion: (() -> Void)? = nil) {
-        setupPendingView()
+        isHidden = false
         UIView.animate(withDuration: CATransaction.animationDuration(), animations: { [weak self] in
             self?.alpha = 1.0
         }) { (_) in
@@ -71,26 +67,9 @@ class PendingView: UIView {
         UIView.animate(withDuration: CATransaction.animationDuration(), animations: { [weak self] in
             self?.alpha = 0.0
         }) { [weak self] (_) in
-            self?.removeFromSuperview()
+            self?.isHidden = true
             completion?()
         }
-    }
-
-    private func setupPendingView() {
-        let view: UIView
-        if let keyWindow = UIApplication.shared.keyWindow {
-            view = keyWindow
-        } else if let topController = UIApplication.shared.topController() {
-            view = topController.view
-        } else { return }
-
-        view.addSubview(self)
-        alpha = 0.0
-        translatesAutoresizingMaskIntoConstraints = false
-        leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     private func setupSubviews() {
@@ -132,7 +111,7 @@ class PendingView: UIView {
     private func setupTitle() {
         let title = UILabel()
 
-        title.text = self.title
+        title.text = NSLocalizedString("restore_pending_view.title", comment: "RestorePending view")
         title.font = Theme.shared.fonts.restorePendingViewTitle
         title.textColor = Theme.shared.colors.restorePendingViewTitle
 
@@ -145,7 +124,7 @@ class PendingView: UIView {
         description.numberOfLines = 0
         description.textAlignment = .center
 
-        description.text = self.definition
+        description.text = NSLocalizedString("restore_pending_view.description", comment: "RestorePending view")
         description.font = Theme.shared.fonts.restorePendingViewDescription
         description.textColor = Theme.shared.colors.restorePendingViewDescription
 

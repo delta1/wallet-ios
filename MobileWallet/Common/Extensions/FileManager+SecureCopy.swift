@@ -42,10 +42,6 @@ import Foundation
 
 extension FileManager {
 
-    func documentDirectory() -> URL? {
-        urls(for: .documentDirectory, in: .userDomainMask).first
-    }
-
     enum ContentDateType {
         case created, modified, accessed
 
@@ -80,18 +76,14 @@ extension FileManager {
 
     func secureCopyItem(at srcURL: URL, to dstURL: URL) -> Bool {
         do {
-            if fileExists(atPath: dstURL.path) {
-                try removeItem(at: dstURL)
+            if FileManager.default.fileExists(atPath: dstURL.path) {
+                try FileManager.default.removeItem(at: dstURL)
             }
-            try copyItem(at: srcURL, to: dstURL)
+            try FileManager.default.copyItem(at: srcURL, to: dstURL)
         } catch let error {
             print("Cannot copy item at \(srcURL) to \(dstURL): \(error)")
             return false
         }
         return true
-    }
-
-    func removeBackup(_ backup: Backup) throws {
-        try removeItem(at: backup.url)
     }
 }

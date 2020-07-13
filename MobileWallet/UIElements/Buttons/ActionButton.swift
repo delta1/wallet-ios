@@ -39,7 +39,6 @@
 */
 
 import UIKit
-import Lottie
 
 enum ActionButtonVariation {
     case normal
@@ -53,7 +52,6 @@ class ActionButton: UIButton {
     static let HEIGHT: CGFloat = 53.0
 
     private let gradientLayer = CAGradientLayer()
-    private let pendingAnimationView = AnimationView()
 
     var variation: ActionButtonVariation = .normal {
         didSet {
@@ -120,8 +118,6 @@ class ActionButton: UIButton {
 
      private func removeStyle() {
         removeGradient()
-        pendingAnimationView.removeFromSuperview()
-        titleLabel?.isHidden = false
         backgroundColor = Theme.shared.colors.actionButtonBackgroundSimple
     }
 
@@ -148,14 +144,14 @@ class ActionButton: UIButton {
                 return
             case .loading:
                 isEnabled = false
-                titleLabel?.isHidden = true
                 applyGradient()
-                setupPendingAnimation()
+                //TODO spinner
                 return
             case .disabled:
                 isEnabled = false
                 backgroundColor = Theme.shared.colors.actionButtonBackgroundDisabled
                 return
+        default: break
         }
     }
 
@@ -201,19 +197,5 @@ class ActionButton: UIButton {
                 comletion?()
             }
         })
-    }
-
-    private func setupPendingAnimation() {
-        pendingAnimationView.backgroundBehavior = .pauseAndRestore
-        pendingAnimationView.animation = Animation.named(.pendingCircleAnimation)
-
-        addSubview(pendingAnimationView)
-        pendingAnimationView.translatesAutoresizingMaskIntoConstraints = false
-        pendingAnimationView.widthAnchor.constraint(equalToConstant: 45).isActive = true
-        pendingAnimationView.heightAnchor.constraint(equalToConstant: 45).isActive = true
-        pendingAnimationView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        pendingAnimationView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-
-        pendingAnimationView.play(fromProgress: 0, toProgress: 1, loopMode: .loop)
     }
 }

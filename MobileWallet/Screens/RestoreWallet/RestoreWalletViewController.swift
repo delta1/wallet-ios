@@ -41,8 +41,9 @@
 import UIKit
 import LocalAuthentication
 
-class RestoreWalletViewController: SettingsParentTableViewController {
-    private let pendingView = PendingView(title: NSLocalizedString("restore_pending_view.title", comment: "RestorePending view"), definition: NSLocalizedString("restore_pending_view.description", comment: "RestorePending view"))
+class RestoreWalletViewController: UIViewController {
+    private let pendingView = RestoreWalletPendingView()
+    private let tableView = UITableView()
     private let items: [SystemMenuTableViewCellItem] = [
         SystemMenuTableViewCellItem(title: RestoreCellTitle.iCloudRestore.rawValue)]
     // SystemMenuTableViewCellItem(title: RestoreCellTitle.phraseRestore.rawValue)]
@@ -59,10 +60,11 @@ class RestoreWalletViewController: SettingsParentTableViewController {
         }
     }
 
+    private let navigationBar = NavigationBar()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        setupView()
     }
 }
 
@@ -94,21 +96,27 @@ extension RestoreWalletViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView()
-        header.backgroundColor = .clear
-
-        header.heightAnchor.constraint(equalToConstant: 15.0).isActive = true
-        return header
-    }
-
     private func oniCloudRestoreAction() {
         let locatAuth = LAContext()
         locatAuth.authenticateUser(reason: .userVerification) { [weak self] in
-            if self?.iCloudBackup.lastBackup?.isEncrypted == true {
-                self?.navigationController?.pushViewController(PasswordVerificationViewController(variation: .restore, restoreWalletAction: self?.restoreWallet(password:)), animated: true)
-            } else {
-                self?.restoreWallet(password: nil)
+            self?.pendingView.showPendingView {
+                ICloudBackup.shared.restoreWallet(completion: { [weak self] error in
+
+                    if error != nil {
+                        UserFeedback.shared.error(title: NSLocalizedString("iCloud_backup.error.restore_wallet.title", comment: "RestoreWallet view"), description: error?.localizedDescription ?? "", error: nil) { [weak self] in
+                            self?.pendingView.hidePendingView()
+                        }
+                        return
+                    }
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+                        self?.pendingView.hidePendingView { [weak self] in
+                            UserDefaults.standard.set(true, forKey: HomeViewController.INTRO_TO_WALLET_USER_DEFAULTS_KEY)
+                            UserDefaults.standard.set(true, forKey: "authStepPassed")
+                            self?.returnToSplashScreen()
+                        }
+                    }
+                })
             }
         }
     }
@@ -116,25 +124,57 @@ extension RestoreWalletViewController: UITableViewDelegate, UITableViewDataSourc
     private func onPhraseRestoreAction() {
 
     }
+}
 
-    private func restoreWallet(password: String?) {
-        pendingView.showPendingView { [weak self] in
-            ICloudBackup.shared.restoreWallet(password: password, completion: { [weak self] error in
+// MARK: Setup subviews
+extension RestoreWalletViewController {
+    private func setupView() {
+        view.backgroundColor = Theme.shared.colors.settingsTableStyleBackground
+        navigationBar.backgroundColor = Theme.shared.colors.settingsTableStyleBackground
+        setupNavigationBar()
+        setupTableView()
+        setupPendingView()
+    }
 
-                if error != nil {
-                    UserFeedback.shared.error(title: NSLocalizedString("iCloud_backup.error.title.restore_wallet", comment: "RestoreWallet view"), description: error?.localizedDescription ?? "", error: nil) { [weak self] in
-                        self?.pendingView.hidePendingView()
-                    }
-                    return
-                }
+    private func setupNavigationBar() {
+        navigationBar.title = NSLocalizedString("restore_wallet.title", comment: "RestoreWallet view")
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-                    self?.pendingView.hidePendingView { [weak self] in
-                        self?.returnToSplashScreen()
-                    }
-                }
-            })
-        }
+        view.addSubview(navigationBar)
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+
+        navigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        navigationBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        navigationBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        navigationBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
+    }
+
+    private func setupTableView() {
+        tableView.register(SystemMenuTableViewCell.self, forCellReuseIdentifier: String(describing: SystemMenuTableViewCell.self))
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.backgroundColor = .clear
+        tableView.isScrollEnabled = false
+        tableView.separatorColor = Theme.shared.colors.settingsTableStyleBackground
+
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+
+        tableView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: 25).isActive = true
+        tableView.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+    }
+
+    private func setupPendingView() {
+        view.addSubview(pendingView)
+        pendingView.alpha = 0.0
+        pendingView.isHidden = true
+
+        pendingView.translatesAutoresizingMaskIntoConstraints = false
+        pendingView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        pendingView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        pendingView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        pendingView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
     private func returnToSplashScreen() {
@@ -152,18 +192,5 @@ extension RestoreWalletViewController: UITableViewDelegate, UITableViewDataSourc
                 self?.navigationController?.popToRootViewController(animated: true)
             }
         }
-    }
-}
-
-// MARK: Setup subviews
-extension RestoreWalletViewController {
-    override func setupNavigationBar() {
-        super.setupNavigationBar()
-        navigationBar.backgroundColor = .clear
-        navigationBar.title = NSLocalizedString("restore_wallet.title", comment: "RestoreWallet view")
-    }
-
-    override func setupNavigationBarSeparator() {
-        return
     }
 }

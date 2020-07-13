@@ -89,8 +89,6 @@ class TariLib {
 
     var tariWallet: Wallet?
 
-    var walletPublicKeyHex: String? //We need a cache of this for function that run while tariWallet = nil
-
     var walletExists: Bool {
         do {
             let fileExists = try TariSettings.shared.storageDirectory.appendingPathComponent(TariLib.databaseName, isDirectory: true).checkResourceIsReachable()
@@ -289,8 +287,6 @@ class TariLib {
 
         TariEventBus.postToMainThread(.walletServiceStarted)
 
-        walletPublicKeyHex = tariWallet?.publicKey.0?.hex.0
-
         walletIsStopped = false
 
         try tariWallet?.addBaseNodePeer(try BaseNode(TariSettings.shared.getRandomBaseNode()))
@@ -358,14 +354,12 @@ class TariLib {
     }
 
     func waitIfWalletIsRestarting(completion: @escaping ((_ success: Bool?) -> Void)) {
-        if !walletExists { completion(false); return }
-        if walletIsStopped == false { completion(true); return }
+        if !walletExists { completion(false) }
 
         var waitingTime = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) { [weak self] (timer) in
-            guard let self = self else { timer.invalidate(); return }
-            if self.walletIsStopped == false || waitingTime >= 5.0 {
-                completion(!self.walletIsStopped)
+            if self?.walletIsStopped == false || waitingTime >= 5.0 {
+                completion(self?.walletIsStopped)
                 timer.invalidate()
             }
             waitingTime += timer.timeInterval

@@ -72,7 +72,7 @@ class SplashViewController: UIViewController, UITextViewDelegate {
     var animationContainerBottomAnchorToVideo: NSLayoutConstraint?
     private let progressFeedbackView = FeedbackView()
     private lazy var authStepPassed: Bool = {
-        UserDefaults.Key.authStepPassed.boolValue()
+        UserDefaults.standard.bool(forKey: "authStepPassed")
     }()
 
     // MARK: - Override functions
@@ -226,7 +226,6 @@ class SplashViewController: UIViewController, UITextViewDelegate {
             }
 
         } else {
-            BPKeychainWrapper.removeBackupPasswordFromKeychain()
             videoView.isHidden = false
             titleLabel.isHidden = false
             createWalletButton.isHidden = false
